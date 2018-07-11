@@ -1,0 +1,138 @@
+
+.chat-board{
+  height: 90%;
+  width: 100%;
+  overflow: auto;
+  background: #fff;
+  /* margin: 0 3% 0 3%; */
+  padding: 1%;
+  border-radius: 0 0 10px 10px;
+  
+}
+.chat-scroll{
+  /* height: 100%; */
+  width: 100%;
+  position: relative;
+  will-change: transform;
+  position: relative;
+  top:100%;
+}
+
+.now-scroll{
+  animation-name: moveupback1;
+  animation-duration: 11s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  will-change: transform;
+}
+
+/* strangely if this name is 'move',then move towards left */
+@-webkit-keyframes moveupback1 {
+  0% {
+    /* top: 0%; */
+    opacity: 1;
+    /* transform: translateY(100%); */
+  }
+  50%{
+    opacity: 0.9;
+  }
+  100% {
+    top: -200%;
+    /* transform: translateY(-110%); */
+    opacity: 0;
+  }
+}
+
+.chat-scroll:hover {
+  -webkit-animation-play-state: paused;
+}
+
+
+.chat-title{
+  border-bottom: solid 1px #F1F6FB;
+  display:inline-block;
+  height: 10%;
+  line-height: 40px;
+  width: 100%;
+  /* margin: 3% 3% 0px 3%; */
+  color: #007BFF;
+  background: #fff;
+  border-radius: 10px 10px 0 0;
+}
+
+.chat-logo{
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin: 0 5px 0 10px;
+}
+
+.chat-item{
+  overflow: hidden;
+  margin: 12px 0;
+  font-size: 12px;
+}
+
+.chat-asker,
+.chat-answerer{
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  vertical-align: top;
+}
+
+.chat-asker{
+  background: url(chat-asker.png);
+  background-size: 36px; 
+  float: right;
+  margin-left: -8px;
+}
+
+.chat-answerer{
+  background: url(chat-answerer.png);
+  background-size: 36px; 
+  margin-right: -8px;
+}
+
+.chat-question,
+.chat-answer{
+  padding: 10px 10px;
+  display: inline-block;
+  border-radius: 20px;
+  max-width: 80%;
+}
+
+.chat-question{
+  float: right;
+  background: #2394FB;
+  color: #fff;
+}
+.chat-question-corner{
+  float: right;
+  background: url(bubble-right.png);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: -12px;
+  top: 18px;
+}
+.chat-answer{
+  background: #F1F6FB;
+  color: #333333;
+}
+.chat-answer a{
+  /* background: #F1F6FB; */
+  color: #2394FB;
+  cursor: pointer;
+}
+.chat-answer-corner{
+  background: url(bubble-left.png);
+  display: inline-block;
+  width: 23px;
+  height: 21px;
+  position: relative;
+  left: 14px;
+  top: 15px;
+}

@@ -1,0 +1,37 @@
+/* just for app.js */
+.full-container{
+  width: 100%;
+  background: #000000;
+  background-image: url(bg.png);
+  /* background-image: url(/src/components/bg.png); */
+  background-repeat: repeat-x;
+  height: 100%;
+}
+
+/* shared by both header.js and center.js */
+.mid {
+  margin: 5px auto 15px;
+  overflow: hidden;
+  width: 96%;
+  border-radius: 10px;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+
+::-webkit-scrollbar {
+  width: 0px;  /* remove scrollbar space */
+  background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+/* ::-webkit-scrollbar-thumb { */
+  /* background: #FF0000; */
+/* } */
+
+

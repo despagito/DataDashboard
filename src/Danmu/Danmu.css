@@ -1,0 +1,211 @@
+
+/* danmu */
+/* html{
+  font-size: 10px;
+}
+
+body{
+  font-size: 62.5%;
+} */
+
+input,button{
+  font-family: 'Helvetica Neue',Helvetica,Arial,Microsoft Yahei,sans-serif;
+}
+
+.danmu-title{
+  color: #A7D4FD;
+  text-align: center;
+}
+.danmu-title-img{
+  width: 24px;
+  vertical-align: middle;
+  margin: 0 10px 0 0;
+}
+.danmu{
+  width: 100%;
+  height: 100%;
+}
+
+.main{
+  width: 100%;
+  height: 90%;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+}
+
+.main .main_dan{
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  /* background-color: rgba(0,0,0,.5); */
+  overflow: hidden;
+}
+
+.main .main_dan div{
+  height: 9.9%;
+  border-bottom: 1px solid #fff;
+  position: relative;
+}
+
+/* danmu item style */
+.main .main_dan span{
+/* .damu-item{ */
+  position: absolute;
+  display: inline-block;
+  color: #fff;
+  border-radius: 10px;
+  padding: 1px 20px;
+  font-size: 12px;
+  /* background: #36648B; */
+  white-space:nowrap;
+  line-height: 40px;
+  min-height: 40px;
+  /* width: 300px; */
+  text-shadow: 2px 2px 5px #000;
+  transform: translateX(inherit);
+  /* right: inherit; */
+  /* opacity: 0.5; */
+}
+
+.main .main_dan span.move{
+  -webkit-animation: moveleft 10s;
+  /* -webkit-animation: move 10s infinite; */
+  animation: moveleft 10s;
+  /* animation: moveleft 10s infinite; */
+  -webkit-animation-timing-function: linear;
+}
+
+/* use translateX to avoid width compress */
+@-webkit-keyframes moveleft {
+  0% {
+    transform: translateX(400px);
+    /* right: 0; */
+  }
+  100% {
+    transform: translateX(-800px); 
+    /* right: 120%; */
+  }
+
+
+}
+
+@keyframes move {
+  /*0% {transform: translateX(50vw);}*/
+  50% {transform: translateX(-70vw); opacity: 1;}
+  100% {transform: translateX(-150vw); opacity: 0.5;}
+}
+
+.prompt{
+  width: 100%;
+  height: 10%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-alifn-center: center;
+  align-content: center;
+}
+
+.prompt input[type="text"]{
+  -webkit-box-flex: 5;
+  -webkit-flex: 5;
+  flex: 5;
+  padding: 5px 10px;
+  font-size: 3rem;
+}
+
+.prompt button{
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font-size: 3rem;
+  color: #fff;
+  border: none;
+  background: -webkit-linear-gradient(top,#104E8B,#36648B);
+  background: linear-gradient(top,#104E8B,#36648B);
+  cursor: pointer;
+}
+
+
+.m-barrage{
+  position:relative;
+  width:100%;
+  height:100%;
+
+}
+.m-barrage canvas{
+  width:100%;
+  height:100%;
+}
+
+
+
+/* danmu */
+.danmu-board{
+  width: 100%;
+  height: 100%;
+  /* background: #463744; */
+  overflow: hidden;
+  /* margin-top: 16%; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.marquee {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+}
+
+.marquee1 {
+  -webkit-animation: moveleft 2s infinite linear;
+  animation: moveleft 2s infinite linear;
+  animation-duration: 5s;
+  position: relative;
+  left: 50%;
+  padding: 0;
+  min-width: 500%;
+  /* background: #945571; */
+  margin: 0;
+}
+
+
+.marquee li{
+  float: left;
+  margin: 10px 30px;
+  list-style: none;
+}
+
+@-webkit-keyframes moveleft{
+  0%{
+    left: 100%;
+  }
+  100%{
+    left: -100%;
+  }
+}
+
+@keyframes moveleft{
+  0%{
+    left: 100%;
+  }
+  100%{
+    left: -500%;
+  }
+}
+
+.danmu-item{
+  color: #fff;
+  border-radius: 10px;
+  padding: 1px 20px;
+  font-size: 12px;
+  line-height: 30px;
+  min-height: 30px;
+  /* position: absolute;
+  display: inline-block;
+  white-space:nowrap;
+  text-shadow: 2px 2px 5px #000;
+  transform: translateX(inherit); */
+}
